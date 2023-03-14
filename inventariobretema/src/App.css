@@ -15,7 +15,7 @@ body{
 }
 
 .fondo{
-  background: rgba(252, 185, 86, 0.8);
+  background: rgba(252, 185, 86, 0.5);
   background-repeat: no-repeat;
   width: 230px;
   margin: 150px;
@@ -43,7 +43,7 @@ body{
 
 .boton-login{
   border: none;
-  background-color: rgba(252, 185, 86, 0.8);
+  background-color: rgba(252, 185, 86, 0.5);
   color: rgb(67, 63, 21);
   padding-top: 10px;
   padding-bottom: 1px;
@@ -69,4 +69,31 @@ body{
   flex-direction: column;
   align-items: center;
   margin: 100px;
+}
+
+.fondo-cards{
+  background-color: rgba(252, 185, 86, 0.5);
+  width: 250px;
+  height: 350px;
+  padding: 20px;
+  margin-top: 150px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.boton-rsp{
+  margin-left: 10px;
+  padding: 10px;
+  width: 50px;
+  border: transparent;
+  background-color: rgba(252, 185, 86, 0.8);
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.boton-rsp:hover{
+  border-radius: 10%;
+  background-color: rgb(255, 255, 255);
 }
