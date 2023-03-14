@@ -9,3 +9,64 @@ body{
   padding: 20px;
   display: inline-block;
 }
+
+.App{
+  display: flex;
+}
+
+.fondo{
+  background: rgba(252, 185, 86, 0.8);
+  background-repeat: no-repeat;
+  width: 230px;
+  margin: 150px;
+  padding: 5px;
+}
+
+.logo-img{
+  margin: 40px;
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo-img:hover{
+  width: 100px;
+  border-radius: 10%;
+  background-color: rgb(255, 255, 255);
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.boton-login{
+  border: none;
+  background-color: rgba(252, 185, 86, 0.8);
+  color: rgb(67, 63, 21);
+  padding-top: 10px;
+  padding-bottom: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  line-height: 48px;
+  margin: 10px;
+  font-size: 30px;
+  border-radius: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.boton-login:hover{
+  background-color: rgb(251, 197, 197);
+  box-shadow: 0 0 10px 3px rgb(206, 113, 113);
+}
+
+.container-home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px;
+}
