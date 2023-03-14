@@ -2,14 +2,6 @@ body{
   background-image: url(./assets/img/fondo.png);
 }
 
-.fondo{
-  background: rgba(252, 185, 86, 0.8);
-  width: 80%;
-  margin: auto;
-  padding: 20px;
-  display: inline-block;
-}
-
 .App{
   display: flex;
 }
@@ -96,4 +88,33 @@ body{
 .boton-rsp:hover{
   border-radius: 10%;
   background-color: rgb(255, 255, 255);
+}
+
+.addproduct{
+  background-color: rgba(252, 185, 86, 0.8);
+  width: 280px;
+  height: 400px;
+  padding: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border-radius: 10%;
+  margin: 250px;
+}
+
+.boton-add{
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  margin-left: 75px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.boton-add:hover{
+  background-color: rgba(252, 185, 86, 0.5);
+  box-shadow: 0 0 10px 3px white;
 }
