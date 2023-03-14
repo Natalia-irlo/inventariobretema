@@ -1,0 +1,26 @@
+.fondo{
+    background: rgba(252, 185, 86, 0.8);
+    background-repeat: no-repeat;
+    width: 230px;
+    margin: 150px;
+    padding: 5px;
+  }
+
+  .logo-img{
+    margin: 40px;
+    margin-bottom: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .logo-img:hover{
+    width: 100px;
+    border-radius: 10%;
+    background-color: rgb(255, 255, 255);
+    color: #fff;
+    transform: scale(1.2);
+  }
