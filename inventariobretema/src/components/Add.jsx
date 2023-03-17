@@ -14,7 +14,11 @@ function AgregarObjeto() {
     };
     try {
       const response = await axios.post("http://127.0.0.1:8000/api/product", data);
-      console.log(response.data); // Mostramos la respuesta del servidor en la consola
+      console.log(response.data);
+      setName("");
+      setDescription("");
+      setStock(0);
+      // Mostramos la respuesta del servidor en la consola
       // Aquí puedes hacer algo más con la respuesta del servidor, si lo deseas
     } catch (error) {
       console.error(error);
