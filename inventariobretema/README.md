@@ -13,7 +13,7 @@ Este proyecto consiste en un inventario para gestionar el stock de Brétema by T
 
 ## Vistas :desktop_computer:
 ### Este es el logo de Brétema by Trece
-![This is an image](./src//assets//img//IMG_2365.jpg)
+![This is an image](./src//assets//img//logobretema.png)
 
 ### Estas son las vistas de la página:
 ![This is an image](./src//assets//img/home.png)
