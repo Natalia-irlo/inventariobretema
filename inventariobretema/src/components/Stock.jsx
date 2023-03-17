@@ -31,9 +31,9 @@ function MostrarProductos() {
     "../assets/modelos/ceo.jpg",
   ];
 
-  const handleSearch = (event) => {
-    setBusqueda(event.target.value);
-  };
+//   const handleSearch = (event) => {
+//     setBusqueda(event.target.value);
+//   };
 
   const handleFiltro = (event) => {
     setFiltro(event.target.value);
@@ -48,21 +48,21 @@ function MostrarProductos() {
   }
  
 
-  const actualizarStock = async (id, nuevaCantidad) => {
-    try {
-      await axios.put(`http://127.0.0.1:8000/api/product/${id}`, { stock: nuevaCantidad });
-      const nuevosProductos = productos.map((producto) => {
-        if (producto.id === id) {
-          return { ...producto, stock: nuevaCantidad };
-        } else {
-          return producto;
-        }
-      });
-      setProductos(nuevosProductos);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+//   const actualizarStock = async (id, nuevaCantidad) => {
+//     try {
+//       await axios.put(`http://127.0.0.1:8000/api/product/${id}`, { stock: nuevaCantidad });
+//       const nuevosProductos = productos.map((producto) => {
+//         if (producto.id === id) {
+//           return { ...producto, stock: nuevaCantidad };
+//         } else {
+//           return producto;
+//         }
+//       });
+//       setProductos(nuevosProductos);
+//     } catch (error) {
+//       console.error(error);
+//     }
+//   };
 
 // const [colores, setColores] = useState({});
 
@@ -80,11 +80,11 @@ function MostrarProductos() {
   
 
 
-  const handleStockUpdate = (id, incremento) => {
-    const producto = productos.find((p) => p.id === id);
-    const nuevaCantidad = producto.stock + incremento;
-    actualizarStock(id, nuevaCantidad);
-  };
+//   const handleStockUpdate = (id, incremento) => {
+//     const producto = productos.find((p) => p.id === id);
+//     const nuevaCantidad = producto.stock + incremento;
+//     actualizarStock(id, nuevaCantidad);
+//   };
     
   const eliminarProducto = async (id) => {
     try {
@@ -106,6 +106,18 @@ function MostrarProductos() {
     }
   });
 
+  const handleSearch = (event) => {
+    const searchTerm = event.target.value;
+    setBusqueda(searchTerm);
+    const filteredProductos = productos.filter((producto) => {
+      return (
+        producto.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        producto.description.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    });
+    setProductos(filteredProductos);
+  };
+  
   return (
     <div className="container fondo-cards">
       <div className="row justify-content-center mb-4">
