@@ -13,7 +13,7 @@ Este proyecto consiste en un inventario para gestionar el stock de Brétema by T
 
 ## Vistas :desktop_computer:
 ### Este es el logo de Brétema by Trece
-![This is an image](./assets/img/IMG_2365.jpg)
+![This is an image](./src//assets//img//IMG_2365.jpg)
 
 ### Estas son las vistas de la página:
 ![This is an image](./src//assets//img/home.png)
@@ -37,7 +37,7 @@ Este proyecto consiste en un inventario para gestionar el stock de Brétema by T
 
 ## Instalación :mechanic:
 * Abre una terminal en tu ordenador
-* Después, clona el repositorio utilizando ***$ git clone https://github.com/Natalia-irlo/popders_laravel.git***
+* Después, clona los repositorios utilizando ***$ git clone https://github.com/Natalia-irlo/inventariobretema.git*** y ***$git clone https://github.com/Natalia-irlo/stockbretema.git***
 
 ## ¿Cómo se usa? :key:
 * En tu terminal utiliza ***$ composer install*** 
