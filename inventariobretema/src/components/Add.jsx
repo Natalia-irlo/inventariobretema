@@ -1,58 +1,61 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from "react";
+import axios from "axios";
 
-function Add() {
-  //const [submitItem, setSubmitItem] = useState([]);
-  const [item, setItem] = useState('');
-
-  const DataApi =()=> {
-    const [Data, setData] = useState([]);
-    useEffect(() => {
-      async function fetchData() {
-        const config = {
-          Headers: {
-            Accept: "application/json", 
-          },
-        };
-      const response = await fetch(`http://127.0.0.1:8000/api/product/${item}`, config);
-      const responseJson = await response.json();
-      setData(responseJson);
-
-  } fetchData();
-  }, []);
-    
-  }
-
-  function handleSubmit(event) {
+function AgregarObjeto() {
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [stock, setStock] = useState(0);
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    DataApi();
-  }
-
-  function handleItemChange(event) {
-    setItem(event.target.value);
-  }
-
-
+    const data = {
+      name,
+      description,
+      stock
+    };
+    try {
+      const response = await axios.post("http://127.0.0.1:8000/api/product", data);
+      console.log(response.data); // Mostramos la respuesta del servidor en la consola
+      // Aquí puedes hacer algo más con la respuesta del servidor, si lo deseas
+    } catch (error) {
+      console.error(error);
+    }
+  };
   return (
-    <>
-      <form className='addproduct' onSubmit={handleSubmit}>
-        <h2>Añadir producto</h2>
-        <div className="mb-3">
-          <label for="exampleInputEmail1" class="form-label"><b>Nombre*</b></label>
-          <input className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
-        </div>
-        <div className="mb-3">
-          <label for="exampleInputEmail1" class="form-label"><b>Características</b></label>
-          <input className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"><b>Cantidad*</b></label>
-          <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
-        </div>
-        <button type="submit" className='boton-add'onChange={handleItemChange}>AÑADIR</button>
-      </form>
-    </>
-  )
+    <form className="addproduct d-flex flex-column justify-content-center"  onSubmit={handleSubmit}>
+      <div className="mb-3">
+        <label htmlFor="name" className="form-label"><b>Nombre:</b></label>
+        <input className="form-control"
+          type="text"
+          id="name"
+          name="name"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+          required
+        />
+      </div>
+      <div className="mb-3">
+        <label htmlFor="description"><b>Descripción:</b></label>
+        <textarea className="form-control"
+          id="description"
+          name="description"
+          value={description}
+          onChange={(event) => setDescription(event.target.value)}
+          required
+        />
+      </div>
+      <div className="mb-3">
+        <label htmlFor="stock"><b>Cantidad:</b></label>
+        <input className="form-control"
+          type="number"
+          id="stock"
+          name="stock"
+          value={stock}
+          onChange={(event) => setStock(event.target.value)}
+          required
+        />
+      </div>
+      <button type="submit" className="boton-add">Añadir</button>
+    </form>
+  );
 }
-
-
-export default Add;
+export default AgregarObjeto;
