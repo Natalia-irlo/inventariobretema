@@ -1,5 +1,6 @@
 import React from 'react';
 import logosinfondo from '../assets/img/logosinfondo.png';
+import { Link } from "react-router-dom";
 
 function Home () {
   return (
@@ -8,7 +9,10 @@ function Home () {
         <img className="logo-grande" src={logosinfondo} alt="logo" width="500px" />
       </div>
       <div className='container-botonh'>
-        <button className='boton-login'><p><b>LOG IN</b></p></button>
+      <Link className="links nav-link" target="_self" aria-current="page" to='/Login'>
+        <button className='boton-login'><p><b>LOGIN</b></p></button>
+      </Link>
+        
       </div>
     </div>
   )

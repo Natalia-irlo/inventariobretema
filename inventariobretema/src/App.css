@@ -118,3 +118,53 @@ body{
   background-color: rgba(252, 185, 86, 0.5);
   box-shadow: 0 0 10px 3px white;
 }
+
+.loginfront{
+  background-color: rgba(252, 185, 86, 0.8);
+  width: 280px;
+  height: 310px;
+  padding: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border-radius: 10%;
+  margin: 250px;
+}
+
+.botongo{
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  margin-left: 75px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.botongo:hover{
+  background-color: rgba(252, 185, 86, 0.5);
+  box-shadow: 0 0 10px 3px white;
+}
+
+.content-search{
+  width:fit-content;
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+}
+
+.search{
+  width: 370px;
+  height: 50px;
+  opacity: 0.5;
+  border: none;
+  background-color: white;
+  color: gray;
+  font-size: 2rem
+}
+
+.icon-search{
+  width: 58px;
+}
