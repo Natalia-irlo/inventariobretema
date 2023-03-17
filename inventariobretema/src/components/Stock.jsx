@@ -161,12 +161,12 @@ function MostrarProductos() {
   >
     +
   </button>
-</div>
+
 
                 <button className='boton-rsp' onClick={() => eliminarProducto(producto.id)}>
   <FontAwesomeIcon icon={faTrash} />
 </button>
-
+</div>
               </div>
             </Card.Body>
           </Card>
