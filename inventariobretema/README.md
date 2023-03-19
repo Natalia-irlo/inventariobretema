@@ -19,7 +19,6 @@ Este proyecto consiste en un inventario para gestionar el stock de Brétema by T
 ![This is an image](./src//assets//img/home.png)
 ![This is an image](./src//assets//img/login.png)
 ![This is an image](./src//assets//img/add.png)
-![This is an image]()
 
 ## Framework utilizadas :electric_plug:
 * **HTML** - utilizado para crear la estructura básica de la página web
@@ -51,7 +50,7 @@ Este proyecto consiste en un inventario para gestionar el stock de Brétema by T
 * En tu terminal utiliza ***$ php artisan serve***
 
 ## Colaboradores :family_woman_woman_girl_girl:
-* [Natalia Iriarte](https://github.com/Natalia-irlo) Developer
+* [Natalia Iriarte](https://github.com/Natalia-irlo)
 
 ## Licencia :closed_lock_with_key:
-© [Brétema]()
+© [Brétema by Trece]()
